@@ -882,6 +882,13 @@ ul {
     margin-top: 16px;
 }
 
+.entry-field:focus {
+    outline: none;
+    border-color: var(---primary-btn-color);
+
+}
+
+
 .entry-field {
     width: 264px;
     height: 40px;
@@ -899,9 +906,6 @@ ul {
 
 }
 
-.entry-field:focus {
-    border-color: var(---primary-btn-color);
-}
 
 .footer-button {
     display: flex;
@@ -925,7 +929,7 @@ ul {
 }
 
 .footer-button:hover,
-.footer-button:hover {
+.footer-button:focus {
     background-color: var(---tap-link-color);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1139,6 +1143,10 @@ ul {
     position: relative;
 }
 
+.modal-form-input-container:focus {
+    color: var(---primary-btn-color);
+}
+
 .modal-form-input {
     font-size: 14px;
     line-height: 1.57;
@@ -1146,14 +1154,13 @@ ul {
     width: 100%;
     height: 40px;
     padding-left: 38px;
-    color: var(---gray);
+    color: var(---secondary-background-color);
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: border-color var(---primary-btn-color);
 }
 
 
-.modal-form-input:hover,
 .modal-form-input:focus {
     outline: none;
     border-color: var(---primary-btn-color);
@@ -1180,13 +1187,18 @@ ul {
     transition: fill var(---transition-dur-and-funcial);
 }
 
-.modal-form-input-icon:hover,
+
 .modal-form-input-icon:focus {
     color: var(---primary-btn-color);
     fill: var(---primary-btn-color);
 }
 
-.modal-form-input :focus+.modal-form-input-icon {
+.form-imput :focus {
+    fill: var(---primary-btn-color);
+}
+
+
+.modal-form-input:focus+.modal-form-input-icon {
     fill: var(---primary-btn-color);
 }
 
@@ -1195,7 +1207,7 @@ ul {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.57;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.04em;
     resize: none;
     width: 100%;
     height: 120px;
@@ -1209,13 +1221,25 @@ ul {
     transition: border-color var(---transition-dur-and-funcial);
 }
 
+.modal-form-message {
+
+
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+}
+
+
+
 .modal-form-message::placeholder {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
+
     color: rgba(117, 117, 117, 0.5);
 }
-
 
 .modal-form-message:hover,
 .modal-form-message:focus {
